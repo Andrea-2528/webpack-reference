@@ -107,7 +107,7 @@ import "./styles.css";
 
 ## Adding images from HTML or CSS:
 
-### Images linked in CSS inside `url()` are already handles by `css-loader`
+### Images linked in CSS inside `url()` are already handled by `css-loader`
 
 ### Images inside HTML can be handled by `html-loader`:
 `npm install --save-dev html-loader`
