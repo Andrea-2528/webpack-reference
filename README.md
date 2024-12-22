@@ -213,4 +213,14 @@ module.exports = {
   },
   // ... other package.json stuff
 ```
+### Development and production modes (specified in the `webpack.config.js`) can be set in two different configs (`webpack.dev.js` and `webpack.prod.js`) and run by different npm  commands after changing the `package.json`:
+```json
+  // ... other package.json stuff
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  // ... other package.json stuff
+```
 
