@@ -1,4 +1,4 @@
-# **Webpack quick practice:**
+**# Webpack quick practice:**
 >This is an example of usign Webpack and progressivly including files and options.
 >Therefore this is not a step by step guide due to repetition.
 >`dist` folder is automatically created when running `npx webpack`, therefore not included.
@@ -89,7 +89,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"], //Ordeer is important
+        use: ["style-loader", "css-loader"], //Order is important
       },
     ],
   },
