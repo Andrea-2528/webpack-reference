@@ -224,3 +224,44 @@ module.exports = {
   // ... other package.json stuff
 ```
 
+### Note: this needs the creation of a third file, `webpack.common.js`, which contains the common config for both, as explained here:
+
+# Webpack-merge
+
+### Install webpack-merge as a dev dependency:
+`npm install --save-dev webpack-merge`
+
+### Change `webpack.config.js` to `webpack.common.js` and update it with the following:
+```javascript
+  entry: {
+    app: "./src/index.js",
+  },
+```
+### and
+```javascript
+filename: "main.bundle.js",
+```
+
+### Update webpack.dev.js:
+```javascript
+ const { merge } = require('webpack-merge');
+ const common = require('./webpack.common.js');
+
+ module.exports = merge(common, {
+    mode: 'development',
+    devtool: "eval-source-map",
+    devServer: {
+      watchFiles: ["./src/template.html"],
+    },
+ });
+ ```
+
+### Update webpack.prod.js:
+```javascript
+ const { merge } = require('webpack-merge');
+ const common = require('./webpack.common.js');
+
+ module.exports = merge(common, {
+   mode: 'production',
+ });
+ ```
