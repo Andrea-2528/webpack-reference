@@ -1,3 +1,9 @@
+# Table of Contents:
+
+- [Webpack quick practice](#webpack-quick-practice)
+- [npm scripts](#npm-scripts)
+
+
 # Webpack quick practice:
 >This is an example of usign Webpack and progressivly including files and options.
 >Therefore this is not a step by step guide due to repetition.
@@ -195,7 +201,16 @@ module.exports = {
 
 ### Run `npx webpack serve` to start the dev server, located at `http://localhost:8080`, kill it with `CTRL + C`. Changes need restart.
 
+# npm scripts
 
-
-
+### Inside the package.json, scripts can be added and run with `npm run <script name>`, for example `npm run build`.
+```json
+  // ... other package.json stuff
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  // ... other package.json stuff
+```
 
