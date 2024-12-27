@@ -1,11 +1,7 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
-
-console.log(greeting);
-
-import odinImage from "./image.png";
+import { cry as message} from "./message";
    
-const image = document.createElement("img");
-image.src = odinImage;
+const test = document.createElement("div");
+test.textContent = message;
    
-document.body.appendChild(image);
+document.body.appendChild(test);

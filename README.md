@@ -3,6 +3,11 @@
 - [Webpack quick practice](#webpack-quick-practice)
 - [npm scripts](#npm-scripts)
 
+# Quick setup reference using this repo as template
+
+`npm install --save-dev webpack webpack-cli html-webpack-plugin style-loader css-loader html-loader webpack-dev-server webpack-merge`
+
+`npm run dev`
 
 # Webpack quick practice:
 >This is an example of usign Webpack and progressivly including files and options.
