@@ -61,3 +61,6 @@
 
 - date-fns
 
+- jest
+  
+- babel-jest
